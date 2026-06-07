@@ -116,6 +116,7 @@ export const config = {
     url: getEnvVar('DATABASE_URL', 'postgresql://lexai:lexai_dev_password@localhost:5432/lexai_db'),
     poolMax: getEnvNumber('DB_POOL_MAX', 20),
     poolIdleTimeout: getEnvNumber('DB_POOL_IDLE_TIMEOUT', 30000),
+    sslRejectUnauthorized: getEnvBoolean('DB_SSL_REJECT_UNAUTHORIZED', false),
   },
 
   // Redis (opcional)

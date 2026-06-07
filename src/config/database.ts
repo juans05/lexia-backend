@@ -29,7 +29,7 @@ export function inicializarPool(): Pool {
   try {
     pool = new Pool({
       connectionString: config.database.url,
-      ssl: config.isProduction ? { rejectUnauthorized: true } : false,
+      ssl: { rejectUnauthorized: config.database.sslRejectUnauthorized },
       max: config.database.poolMax,
       idleTimeoutMillis: config.database.poolIdleTimeout,
       connectionTimeoutMillis: 5000,
