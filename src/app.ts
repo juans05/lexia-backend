@@ -33,7 +33,7 @@ app.use((error: any, req: any, res: any, next: any) => {
 });
 
 // Iniciar servidor
-const PORT = process.env.PORT || 3000;
+const PORT = parseInt(process.env.PORT || '3000', 10);
 
 let server: any = null;
 
